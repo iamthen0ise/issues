@@ -11,6 +11,8 @@ const graphQLClient = require("./graphql/client.js");
 const getRepos = require("./graphql/getRepos.js");
 const getIssuesByRepo = require("./graphql/getIssuesByRepo.js");
 
+const ora = require("ora");
+
 async function main() {
   const [owner, repo] = await getRepository();
   await clear();
@@ -25,7 +27,8 @@ async function main() {
 }
 
 async function getRepository() {
-  const data = await graphQLClient.request(getRepos);
+  const spinner = ora("Loading Repositories").start();
+  const data = await graphQLClient.request(getRepos).then(spinner.succeed());
   const returnValue = await inquirer
     .prompt([
       {
@@ -48,7 +51,8 @@ async function getRepository() {
 
 async function getIssues(repo, owner) {
   const query = await getIssuesByRepo(repo, owner);
-  const data = await graphQLClient.request(query);
+  const spinner = ora("Loading Issues").start();
+  const data = await graphQLClient.request(query).then(spinner.succeed());
   const returnValue = await inquirer
     .prompt([
       {
