@@ -3,7 +3,7 @@ const getRepos = `{
         starredRepositories {
             nodes {
             nameWithOwner
-            issues {
+            issues(filterBy: {states: OPEN}) {
                 totalCount
                 }
             }

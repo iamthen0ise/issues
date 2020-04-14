@@ -15,7 +15,7 @@ const ora = require("ora");
 
 async function main() {
   const [owner, repo] = await getRepository();
-  await clear();
+  clear();
   const result = await getIssues(repo, owner).then((res) => {
     return res;
   });
