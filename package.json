@@ -4,12 +4,13 @@
   "description": "issues explorer",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"no test specified\" && exit 0",
     "start": "node main.js"
   },
   "author": "kikisix",
   "license": "ISC",
   "dependencies": {
+    "blessed": "^0.1.81",
     "chalk": "^4.0.0",
     "clear": "^0.1.0",
     "dotenv": "^8.2.0",
