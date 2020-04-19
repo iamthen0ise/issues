@@ -9,6 +9,7 @@ let getIssuesByRepo = function (repo, owner) {
             title
             url
             number
+            createdAt
             }
         }
         }

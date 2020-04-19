@@ -5,12 +5,13 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"no test specified\" && exit 0",
-    "start": "node main.js"
+    "start": "node app.js"
   },
   "author": "kikisix",
   "license": "ISC",
   "dependencies": {
     "blessed": "^0.1.81",
+    "blessed-contrib": "^4.8.19",
     "chalk": "^4.0.0",
     "clear": "^0.1.0",
     "dotenv": "^8.2.0",
