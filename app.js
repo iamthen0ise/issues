@@ -162,6 +162,7 @@ async function main() {
       #${issueBody.repository.issue.number}\n
       title: ${issueBody.repository.issue.title}\n
       created at: ${issueBody.repository.issue.createdAt}\n
+      URL: ${issueBody.repository.issue.url}\n
       body:\n${issueBody.repository.issue.bodyText}
     `;
     screen.render();

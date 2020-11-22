@@ -9,6 +9,7 @@ function getIssueBody(repo, owner, issueId) {
             title
             createdAt
             bodyText
+            url
           }
         }
       }
